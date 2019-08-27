@@ -6,24 +6,19 @@ const bucketSchema = new mongoose.Schema({
     required: true
   },
   place: {
-    type: String,
-    required: false
+    type: String
   },
   completeBy: {
-    type: Date,
-    required: false
+    type: String
   },
   description: {
-    type: String,
-    required: false
+    type: String
   },
   shareWith: {
-    type: String,
-    required: false
+    type: String
   },
   completed: {
-    type: String,
-    required: false
+    type: String
   },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
