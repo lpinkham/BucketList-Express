@@ -1,8 +1,19 @@
 # Bucket List App
 
+![alt text](https://i.imgur.com/5mbxMvk.jpg "Bucket List App")
+[Imgur](https://i.imgur.com/5mbxMvk.jpg)
+
 Bucket List App is a single page application that a user can login and add items
-to their bucket list. Once you have completed an item just check it off as
+to their bucket list. Once you have completed an item just mark it as
 completed.
+
+To use create an account, sign-in and starting adding buckets to your app.
+
+
+## Links to deployed Site
+(https://lpinkham.github.io/BucketList-FrontEnd/)
+(https://secret-badlands-58963.herokuapp.com)
+
 
 ## Installation
 
@@ -20,23 +31,33 @@ completed.
 
 
 ## Link TO ERD
+
 (https://imgur.com/a/nkEmtax)
 
 
-## Tasks
+## Technologies used
+1.  Express
+2.  HTML
+3.  CSS
+4.  Javascript
+5.  jQuery
+6.  Handlebars
 
-Instead of `grunt`, this template uses `npm` as a task runner. This is more
-conventional for modern Express apps, and it's handy because we'll definitely
-use `npm` anyway. These are the commands available:
+## Process and Planning
+The process and planning process started with an idea of what the app would do. From there I began with writting the user stories.
+Then came a basic wireframe and a data diagram.
 
-## API
+Once the initial planning was complete I dove into the code. Starting with the back-end. Set up CURL scripts and tested user auth.
+Then added models and routes for the buckets.
 
-Use this as the basis for your own API documentation. Add a new third-level
-heading for your custom entities, and follow the pattern provided for the
-built-in user authentication documentation.
+From there I jumped over to the front-end and started with a plain html doc that was enough to get started with testing
+creating, edit and delete of the buckets. After that came styling and documenting.
 
-Scripts are included in [`curl-scripts`](curl-scripts) to test built-in actions.
-Add your own scripts to test your custom API.
+Problem-solving was a lot of googling on how to best do some things. Most of that was for styling. Using my previous classroom assignments
+was very helpful with tying to solve why create or edit wasn't working properly.
+
+## Future Updates
+In the future I would add to this app by allowing users to be able upload a photo or two for each bucket list.
 
 ### Authentication
 
@@ -44,11 +65,9 @@ Add your own scripts to test your custom API.
 |--------|------------------------|-------------------|
 | POST   | `/sign-up`             | `users#signup`    |
 | POST   | `/sign-in`             | `users#signin`    |
-| PATCH  | `/change-password/`    | `users#changepw`  |
-| DELETE | `/sign-out/`           | `users#signout`   |
+| PATCH  | `/change-password`     | `users#changepw`  |
+| DELETE | `/sign-out`            | `users#signout`   |
 | POST   | `/create-bucket`       | `bucket#create`   |
 | GET    | `/buckets`             | `bucket#index`    |
-| PATCH  | `/update-bucket/`      | `bucket#update`   |
-| DELETE | `/delete-bucket/`      | `bucket#delete`   |
-
-####
+| PATCH  | `/update-bucket`       | `bucket#update`   |
+| DELETE | `/delete-bucket`       | `bucket#delete`   |
