@@ -30,13 +30,13 @@ const router = express.Router()
 // INDEX
 // GET /buckets
 router.get('/buckets', requireToken, (req, res, next) => {
+  const userId = req.user._id.toString()
   Bucket.find()
-    .populate('owner')
     .then(buckets => {
       // `buckets` will be an array of Mongoose documents
       // we want to convert each one to a POJO, so we use `.map` to
       // apply `.toObject` to each one
-      return buckets.map(bucket => bucket.toObject())
+      return buckets.map(bucket => bucket.toObject()).filter(bucket => userId === bucket.owner.toString())
     })
     // respond with status 200 and JSON of the buckets
     .then(buckets => res.status(200).json({ buckets: buckets }))
@@ -49,7 +49,6 @@ router.get('/buckets', requireToken, (req, res, next) => {
 router.get('/buckets/:id', requireToken, (req, res, next) => {
   // req.params.id will be set based on the `:id` in the route
   Bucket.findById(req.params.id)
-    .populate('owner')
     .then(handle404)
     // if `findById` is succesful, respond with 200 and "bucket" JSON
     .then(bucket => res.status(200).json({ bucket: bucket.toObject() }))
