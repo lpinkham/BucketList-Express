@@ -27,7 +27,7 @@ To use create an account, sign-in and starting adding buckets to your app.
 
 ## Link to Heroku
 
- https://git.heroku.com/secret-badlands-58963.git
+ (https://git.heroku.com/secret-badlands-58963.git)
 
 
 ## Link TO ERD
@@ -42,19 +42,17 @@ To use create an account, sign-in and starting adding buckets to your app.
 4.  Javascript
 5.  jQuery
 6.  Handlebars
+7. Bootstrap
 
 ## Process and Planning
-The process and planning process started with an idea of what the app would do. From there I began with writting the user stories.
-Then came a basic wireframe and a data diagram.
+The process and planning process started with an idea of what the app would do. From there I began with writting the user stories. Then came a basic wireframe and a data diagram.
 
-Once the initial planning was complete I dove into the code. Starting with the back-end. Set up CURL scripts and tested user auth.
-Then added models and routes for the buckets.
+Once the initial planning was complete I dove into the code. Starting with the back-end. Set up CURL scripts and tested user auth. Then added models and routes for the buckets.
 
 From there I jumped over to the front-end and started with a plain html doc that was enough to get started with testing
 creating, edit and delete of the buckets. After that came styling and documenting.
 
-Problem-solving was a lot of googling on how to best do some things. Most of that was for styling. Using my previous classroom assignments
-was very helpful with tying to solve why create or edit wasn't working properly.
+Problem-solving was a lot of googling on how to best do some things. Most of that was for styling. Using my previous classroom assignments was very helpful with tying to solve why create or edit wasn't working properly.
 
 ## Future Updates
 In the future I would add to this app by allowing users to be able upload a photo or two for each bucket list.
